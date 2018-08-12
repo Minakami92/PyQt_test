@@ -7,6 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt4 import QtCore, QtGui
+from main import *
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -26,29 +27,25 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName(_fromUtf8("Form"))
         Form.resize(677, 640)
-        self.listView = QtGui.QListView(Form)
-        self.listView.setGeometry(QtCore.QRect(20, 20, 621, 231))
-        self.listView.setObjectName(_fromUtf8("listView"))
+        self.listWidget = QtGui.QListWidget(Form)
+        self.listWidget.setGeometry(QtCore.QRect(20, 20, 621, 231))
+        self.listWidget.setObjectName(_fromUtf8("listWidget"))
         self.pushButton_2 = QtGui.QPushButton(Form)
         self.pushButton_2.setGeometry(QtCore.QRect(240, 260, 171, 27))
         self.pushButton_2.setObjectName(_fromUtf8("pushButton_2"))
-        self.listView_2 = QtGui.QListView(Form)
-        self.listView_2.setGeometry(QtCore.QRect(20, 340, 621, 241))
-        self.listView_2.setObjectName(_fromUtf8("listView_2"))
+        self.listWidget_2 = QtGui.QListWidget(Form)
+        self.listWidget_2.setGeometry(QtCore.QRect(20, 340, 621, 241))
+        self.listWidget_2.setObjectName(_fromUtf8("listWidget_2"))
         self.pushButton_4 = QtGui.QPushButton(Form)
         self.pushButton_4.setGeometry(QtCore.QRect(240, 290, 171, 27))
         self.pushButton_4.setObjectName(_fromUtf8("pushButton_4"))
 
         self.retranslateUi(Form)
-        QtCore.QObject.connect(self.pushButton_2, QtCore.SIGNAL(_fromUtf8("clicked()")), button2Clicked)
-        QtCore.QObject.connect(self.pushButton_4, QtCore.SIGNAL(_fromUtf8("clicked()")), button4Clicked)
+        QtCore.QObject.connect(self.pushButton_2, QtCore.SIGNAL(_fromUtf8("clicked()")), onClickedButton2)
+        QtCore.QObject.connect(self.pushButton_4, QtCore.SIGNAL(_fromUtf8("clicked()")), onClickedButton4)
         QtCore.QMetaObject.connectSlotsByName(Form)
-    def button2Clicked(self,Form):
-        pass
-    def button4Clicked(self,Form):
-        pass
- 
-   def retranslateUi(self, Form):
+
+    def retranslateUi(self, Form):
         Form.setWindowTitle(_translate("Form", "Form", None))
         self.pushButton_2.setText(_translate("Form", "Add new account", None))
         self.pushButton_4.setText(_translate("Form", "Delete this account", None))

@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QListView" name="listView">
+  <widget class="QListWidget" name="listWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -36,7 +36,7 @@
     <string>Add new account</string>
    </property>
   </widget>
-  <widget class="QListView" name="listView_2">
+  <widget class="QListWidget" name="listWidget_2">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -65,32 +65,32 @@
   <connection>
    <sender>pushButton_2</sender>
    <signal>clicked()</signal>
-   <receiver>listView</receiver>
+   <receiver>listWidget</receiver>
    <slot>selectAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>324</x>
-     <y>268</y>
+     <x>262</x>
+     <y>266</y>
     </hint>
     <hint type="destinationlabel">
-     <x>290</x>
-     <y>185</y>
+     <x>227</x>
+     <y>175</y>
     </hint>
    </hints>
   </connection>
   <connection>
    <sender>pushButton_4</sender>
    <signal>clicked()</signal>
-   <receiver>listView</receiver>
-   <slot>reset()</slot>
+   <receiver>listWidget</receiver>
+   <slot>selectAll()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>348</x>
-     <y>295</y>
+     <x>362</x>
+     <y>296</y>
     </hint>
     <hint type="destinationlabel">
-     <x>346</x>
-     <y>147</y>
+     <x>320</x>
+     <y>168</y>
     </hint>
    </hints>
   </connection>

@@ -3,7 +3,11 @@
 import sys
 from PyQt4 import QtCore, QtGui
 import form
- 
+
+def onClickedButton2():
+    pass
+def onClickedButton4():
+    pass
 class MyForm(QtGui.QMainWindow):
 
     def __init__(self,parent=None):
